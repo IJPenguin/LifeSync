@@ -9,13 +9,9 @@ const db_uri = process.env.DB_CONNECTION_STRING;
 
 const client = new MongoClient(db_uri);
 
-app.route("").post((req, res) => {
-	
-})
+app.route("/auth").post("/signup");
 
-app.route("/staff/auth").post((req,res) => {
 
-})
 
 app.listen(port, () => {
 	console.log(chalk.greenBright(`🚀 Server is running on port ${port} 🚀`));
