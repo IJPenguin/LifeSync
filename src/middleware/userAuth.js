@@ -1,11 +1,10 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const jwt = require("jsonwebtoken");
-const { getUser } = require("./utils");
-const cookieParser = require("cookie-parser");
-const router = express.Router();
+const { getUser, makeUser } = require("./utils");
+const userRouter = express.Router();
 
-router.get("/login/:username-:password", async (res, req) => {
+userRouter.get("/login/:username-:password", async (req, res) => {
 	const username = req.params.username;
 	const password = req.params.password;
 	const user = getUser(username);
@@ -18,19 +17,47 @@ router.get("/login/:username-:password", async (res, req) => {
 		res.status(401).send("Wrong Password");
 	}
 
+	delete user.password;
+
 	const token = jwt.sign(
 		{ username: user.username },
 		process.env.SECRET_KEY,
 		{ expiresIn: "1h" }
 	);
 
-	res.cookies("token", token, { httpOnly: true });
-	res.send("Logged In");
+	res.cookie("token", token, { httpOnly: true });
+	res.status(200).send("Logged In");
 });
 
-router.post("/upload", async (res, req) => {
-	const caption = capgeneration(req.body.image);
-	res.send(caption);
+userRouter.post("/signUp", async (req, res) => {
+	const name = req.body.name;
+	const username = req.body.username;
+	const email = req.body.email;
+	const password = req.body.password;
+	const dob = req.body.dob;
+	const address = req.body.address;
+	const phone = req.body.phone;
+	const emergencyContact = req.body.emergencyContact;
+
+	const user = makeUser(
+		name,
+		username,
+		email,
+		password,
+		dob,
+		address,
+		phone,
+		emergencyContact
+	);
+
+	const token = jwt.sign(
+		{ username: user.username },
+		process.env.SECRET_KEY,
+		{ expiresIn: "1h" }
+	);
+
+	res.cookie("token", token, { httpOnly: true });
+	res.status(200).send("Signed Up");
 });
 
-module.exports = router;
+module.exports = userRouter;
