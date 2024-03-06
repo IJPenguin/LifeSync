@@ -28,9 +28,4 @@ router.get("/login/:username-:password", async (res, req) => {
 	res.send("Logged In");
 });
 
-router.post("/upload", async (res, req) => {
-	const caption = capgeneration(req.body.image);
-	res.send(caption);
-});
-
 module.exports = router;
