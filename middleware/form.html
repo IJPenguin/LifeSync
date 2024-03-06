@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Data Form</title>
+  </head>
+  <body>
+    <h1>Patient Data Form</h1>
+    <form
+      action="http://localhost:6969/submit"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <!-- Basic Information -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required /><br /><br />
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option></select
+      ><br /><br />
+
+      <!-- Contact Information -->
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" required></textarea><br /><br />
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required /><br /><br />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" /><br /><br />
+
+      <!-- Emergency Contact -->
+      <label for="emergencyContact">Emergency Contact:</label>
+      <input
+        type="text"
+        id="emergencyContact"
+        name="emergencyContact"
+        required
+      /><br /><br />
+
+      <!-- Medical History -->
+      <label for="allergies">Allergies:</label>
+      <textarea id="allergies" name="allergies"></textarea><br /><br />
+
+      <label for="medications">Current Medications:</label>
+      <textarea id="medications" name="medications"></textarea><br /><br />
+
+      <!-- Upload Test Results -->
+      <label for="testType1">Test Type:</label>
+      <select id="testType1" name="testType1" required>
+        <option value="bloodTest">Blood Test</option>
+        <option value="urineTest">Urine Test</option>
+        <option value="xray">X-ray</option></select
+      ><br /><br />
+
+      <label for="testResultFiles">Upload Test Result:</label>
+      <input
+        type="file"
+        id="testResultFiles"
+        name="testResultFiles"
+        accept=".jpg, .jpeg, .png, .pdf"
+        required
+      /><br /><br />
+
+      <!-- Button to Add More Test Results -->
+      <div id="additionalTestResults"></div>
+      <button type="button" onclick="addTestResult()">
+        Add More Test Result</button
+      ><br /><br />
+
+      <!-- Submit Button -->
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      let testResultCount = 1;
+
+      function addTestResult() {
+        testResultCount++;
+        const additionalTestResultsDiv = document.getElementById(
+          "additionalTestResults"
+        );
+
+        const testTypeSelect = document.createElement("select");
+        testTypeSelect.setAttribute("name", "testType" + testResultCount);
+        testTypeSelect.required = true;
+        const testTypes = ["Blood Test", "Urine Test", "X-ray"]; // Add more test types as needed
+        testTypes.forEach((testType) => {
+          const option = document.createElement("option");
+          option.setAttribute(
+            "value",
+            testType.toLowerCase().replace(/\s+/g, "")
+          );
+          option.textContent = testType;
+          testTypeSelect.appendChild(option);
+        });
+
+        const testResultInput = document.createElement("input");
+        testResultInput.setAttribute("type", "file");
+        testResultInput.setAttribute("name", "testResultFiles");
+        testResultInput.setAttribute("accept", ".jpg, .jpeg, .png, .pdf");
+        testResultInput.required = true;
+
+        additionalTestResultsDiv.appendChild(document.createElement("br"));
+        additionalTestResultsDiv.appendChild(
+          document.createTextNode(`Test Type: `)
+        );
+        additionalTestResultsDiv.appendChild(testTypeSelect);
+        additionalTestResultsDiv.appendChild(document.createElement("br"));
+        additionalTestResultsDiv.appendChild(
+          document.createTextNode(`Upload Test Result: `)
+        );
+        additionalTestResultsDiv.appendChild(testResultInput);
+      }
+    </script>
+  </body>
+</html>
