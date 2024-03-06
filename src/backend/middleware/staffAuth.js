@@ -39,6 +39,7 @@ userRouter.post("/signUp", async (req, res) => {
 	const address = req.body.address;
 	const phone = req.body.phone;
 	const emergencyContact = req.body.emergencyContact;
+	const isStaff = true;
 
 	const user = makeUser(
 		name,
@@ -48,7 +49,8 @@ userRouter.post("/signUp", async (req, res) => {
 		dob,
 		address,
 		phone,
-		emergencyContact
+		emergencyContact,
+		isStaff
 	);
 
 	const token = jwt.sign(

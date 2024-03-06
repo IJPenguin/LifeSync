@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@font-face {
+	font-family: "Tiempos_Regular";
+	src: url("/assets/fonts/Tiempos-Font/TiemposHeadline-Regular.otf");
+}
+
+@font-face {
+	font-family: "Tiempos_Bold";
+	src: url("/assets/fonts/Tiempos-Font/TiemposHeadline-Medium.otf");
+}
+
+$color-primary: #007b34;
+$color-prim-background: #fffce5;
+$color-sec-background: #bde9c9;
+$color-secondary: #2ea542;
+$color-heading: #002e13;
+$color-white: #fff;
+$color-shadow: rgba(100, 100, 111, 0.2);
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-boxv;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+.login__main__container {
+	height: 100vh;
+	background-color: $color-sec-background;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.login__card {
+	background-color: $color-white;
+	width: 100rem;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	box-shadow: $color-shadow 0px 7px 29px 0px;
+}
+
+.login__flex__container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.login__form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.login__heading {
+	font-family: "Manrope", sans-serif;
+	font-size: 5rem;
+	color: $color-heading;
+	margin-bottom: 2rem;
+	letter-spacing: -1.2px;
+}
+
+.login__form__email,
+.login__form__password {
+	font-family: "Manrope", sans-serif;
+	display: block;
+	height: 4rem;
+	font-size: 1.8rem;
+	width: 30rem;
+	margin-bottom: 1.5rem;
+	border: none;
+	border-bottom: 1px solid $color-heading;
+	padding-top: 1.2rem;
+}
+
+.login__form__password {
+	margin-bottom: 3rem;
+}
+
+.login__form__email:focus,
+.login__form__password:focus {
+	outline: none;
+}
+
+.login__img {
+	width: 50%;
+	height: auto;
+	flex-shrink: 0;
+}
+
+.login__text {
+	font-family: "Manrope", sans-serif;
+	font-size: 2rem;
+	font-weight: 400;
+	margin-bottom: 1rem;
+}
+
+.login__button {
+	font-family: "Manrope", sans-serif;
+	font-weight: 500;
+	font-size: 2rem;
+	background-color: $color-secondary;
+	color: $color-white;
+	border: none;
+	border-radius: 40px;
+	padding: 0.5rem 2rem;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.login__button:hover {
+	background-color: $color-heading;
+}
+
+// .login__signup__link,
+// .login__signup__link:visited,
+// .login__signup__link:active {
+// 	/* text-decoration: none; */
+// 	color: #000;
+// }
+
+.signup__main__container {
+	height: 100vh;
+	background-color: $color-sec-background;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.signup__card {
+	background-color: #fff;
+	width: 100rem;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	box-shadow: $color-shadow 0px 7px 29px 0px;
+}
+
+.signup__flex__container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.signup__form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.signup__heading {
+	font-family: "Manrope", sans-serif;
+	color: $color-heading;
+	font-size: 3.5rem;
+	margin-bottom: 2rem;
+	letter-spacing: -1.2px;
+}
+
+.signup__form__email,
+.signup__form__password {
+	font-family: "Manrope", sans-serif;
+	display: block;
+	height: 4rem;
+	font-size: 1.8rem;
+	width: 30rem;
+	margin-bottom: 1.5rem;
+	border: none;
+	border-bottom: 1px solid $color-heading;
+	padding-top: 1.2rem;
+}
+
+.signup__form__password {
+	margin-bottom: 3rem;
+}
+
+.signup__form__email:focus,
+.signup__form__password:focus {
+	outline: none;
+}
+
+.signup__img {
+	width: 50%;
+	height: auto;
+	flex-shrink: 0;
+}
+
+.signup__text {
+	font-family: "Manrope", sans-serif;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.signup__button {
+	font-family: "Manrope", sans-serif;
+	/* font-family: "Poppins", sans-serif; */
+	font-size: 1.8rem;
+	background-color: $color-secondary;
+	color: #fff;
+	border: none;
+	border-radius: 40px;
+	padding: 0.5rem 2rem;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.signup__button:hover {
+	background-color: $color-heading;
+}
+
+// .signup__login__link,
+// .signup__login__link:visited,
+// .signup__login__link:active {
+// 	/* text-decoration: none; */
+// 	color: #000;
+// }
+
+.nav__container {
+	background-color: $color-white;
+	border-bottom: 3px solid $color-shadow;
+	padding: 1rem 15%;
+}
+
+nav {
+	font-family: "Manrope", sans-serif;
+	font-weight: 400;
+	font-size: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.home__nav__branding {
+	display: flex;
+	align-items: center;
+}
+
+.home__nav__logo {
+	width: 69px;
+	height: auto;
+}
+
+.home__nav__home__link {
+	font-family: "Manrope";
+	font-weight: 500;
+	font-size: 3.5rem;
+	color: $color-primary;
+	text-decoration: none;
+	letter-spacing: -1.5px;
+}
+
+.home__nav__list {
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+}
+
+.home__nav__list__item {
+	margin: 0 10px;
+	cursor: pointer;
+	letter-spacing: -0.1px;
+}
+
+.home__nav__list__link,
+.home__nav__list__link:visited,
+.home__nav__list__link:active {
+	font-weight: 400;
+	font-size: 2rem;
+	text-decoration: none;
+	color: $color-secondary;
+}
+
+.home__nav__list__link:hover {
+	color: #2eb287;
+}
+
+.dropdown {
+	position: absolute;
+	top: 6.7rem;
+	right: 19.2rem;
+	margin: 0 auto;
+	width: fit-content;
+	transform: translateX(-45%);
+	background-color: $color-sec-background;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	padding: 1rem;
+	overflow: hidden;
+	transition: height var(--speed) ease;
+}
+
+.dropdown__list {
+	list-style: none;
+}
+
+.dropdown__list__item {
+	padding: 1rem;
+	cursor: pointer;
+	letter-spacing: -0.1px;
+	border-bottom: 1px solid $color-heading; /* Add this line */
+}
+
+.dropdown__list__item:hover {
+	color: #2eb287;
+	box-shadow: 0px 10px 16px 0px #2eb28733;
+	border: none;
+}
+
+.dropdown__list__item:last-child {
+	border-bottom: none;
+}
+
+.hero__container {
+	height: 90vh;
+	background-color: $color-prim-background;
+}
+
+.hero__text {
+	background: $color-white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 15rem;
+}
+
+.hero__text__subtitle {
+	font-family: "Tiempos_Regular", sans-serif;
+	font-size: 2 rem;
+	color: $color-secondary;
+	letter-spacing: 5px;
+	word-spacing: 5px;
+	margin-bottom: 3rem;
+}
+
+.hero__text__title {
+	font-family: "Tiempos_Regular", sans-serif;
+	font-size: 8rem;
+	color: $color-heading;
+	width: 50vw;
+	text-align: center;
+}
+
+.hero__text__button {
+	font-family: "Manrope", sans-serif;
+	font-size: 1.8rem;
+	background-color: $color-secondary;
+	color: #fff;
+	border: none;
+	border-radius: 50px;
+	padding: 1rem 2rem;
+	margin-top: 1rem;
+	cursor: pointer;
+}
+
+.hero__text__button:hover {
+	background-color: $color-primary;
+}
+
+.hero__images {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: $color-white;
+}
+
+.hero__ambulance {
+	width: 49rem;
+	height: auto;
+	flex-shrink: 0;
+}
+
+.hero__doctor {
+	width: 49rem;
+	height: auto;
+	flex-shrink: 0;
+}
