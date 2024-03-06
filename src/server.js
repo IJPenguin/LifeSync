@@ -4,6 +4,8 @@ const dotenv = require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 6969;
 
+app.use(cookieParser());
+
 app.listen(port, () => {
 	console.log(chalk.greenBright(`🚀 Server is running on port ${port} 🚀`));
 });
