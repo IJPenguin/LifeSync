@@ -3,9 +3,9 @@ const dotenv = require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const { getUser } = require("./utils");
 const cookieParser = require("cookie-parser");
-const router = express.Router();
+const userRouter = express.Router();
 
-router.get("/login/:username-:password", async (res, req) => {
+userRouter.get("/login/:username-:password", async (req, res) => {
 	const username = req.params.username;
 	const password = req.params.password;
 	const user = getUser(username);
@@ -18,14 +18,16 @@ router.get("/login/:username-:password", async (res, req) => {
 		res.status(401).send("Wrong Password");
 	}
 
+	delete user.password;
+
 	const token = jwt.sign(
 		{ username: user.username },
 		process.env.SECRET_KEY,
 		{ expiresIn: "1h" }
 	);
 
-	res.cookies("token", token, { httpOnly: true });
+	res.cookie("token", token, { httpOnly: true });
 	res.send("Logged In");
 });
 
-module.exports = router;
+module.exports = userRouter;

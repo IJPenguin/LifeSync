@@ -4,14 +4,16 @@ const dotenv = require("dotenv").config();
 const { upload } = require("./middleware/resUpload");
 const port = process.env.PORT || 6969;
 const cookieParser = require("cookie-parser");
-
+const { jwtVerify } = require("./middleware/jwtVerify");
+const userRouter = require("./middleware/userAuth");
+const staffRouter = require("./middleware/staffAuth");
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-// Route to handle file submission
 app.post(
 	"/submit",
+	jwtVerify,
 	(req, res, next) => {
 		const testType = req.query.testType;
 		if (!testType) {
@@ -41,6 +43,9 @@ app.post(
 		});
 	}
 );
+
+app.use("/user", userRouter);
+app.use("/staff", staffRouter);
 
 app.listen(port, () => {
 	console.log(
