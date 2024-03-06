@@ -2,6 +2,10 @@ const getUser = () => {
 	return;
 };
 
+const makeUser = () => {
+	return;
+};
+
 function getCurrentDateTime() {
 	let currentDate = new Date();
 	let day = currentDate.getDate();
@@ -23,4 +27,4 @@ function getCurrentDateTime() {
 	return formattedDateTime;
 }
 
-module.exports = { getUser, getCurrentDateTime };
+module.exports = { getUser, makeUser, getCurrentDateTime };
