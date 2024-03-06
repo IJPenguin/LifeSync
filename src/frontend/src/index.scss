@@ -13,9 +13,10 @@ $color-primary: #007b34;
 $color-prim-background: #fffce5;
 $color-sec-background: #bde9c9;
 $color-secondary: #2ea542;
-$color-heading: #002e13;
+$color-heading: #00471F;
 $color-white: #fff;
 $color-shadow: rgba(100, 100, 111, 0.2);
+$color-gray: #343434;
 
 *,
 *::after,
@@ -342,7 +343,7 @@ nav {
 .hero__text__subtitle {
 	font-family: "Tiempos_Regular", sans-serif;
 	font-size: 2 rem;
-	color: $color-secondary;
+	color: $color-gray;
 	letter-spacing: 5px;
 	word-spacing: 5px;
 	margin-bottom: 3rem;
@@ -389,4 +390,179 @@ nav {
 	width: 49rem;
 	height: auto;
 	flex-shrink: 0;
+}
+
+.aboutus__container {
+	width: 100vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: center; 
+	margin-top: 20rem;
+	border: 3px solid $color-shadow;
+	background-color: $color-prim-background;
+}
+
+.aboutus__box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 25rem;
+}
+
+.aboutus__text__title {
+	font-family: "Manrope", sans-serif;
+	font-size: 7rem;
+	color: $color-heading;
+	margin-bottom: 2rem;
+	letter-spacing: -1.2px;
+}
+
+.aboutus__text__description {
+	max-width: 25vw;
+	font-family: "Manrope", sans-serif;
+	font-size: 2rem;
+	font-weight: 500;
+	color: $color-gray;
+	margin-bottom: 3rem;
+}
+
+.aboutus__image {
+	width: 60rem;
+	height: auto;
+}
+
+.services__container {
+	width: 100vw;	
+	margin-bottom: 10rem;
+}
+
+.services__box{
+	margin-top: 20rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.services__text__title {
+	font-family: "Manrope", sans-serif;
+	font-size: 7rem;
+	color: $color-heading;
+	margin-bottom: 5rem;
+	letter-spacing: -1.2px;
+}
+
+.services__image {
+	width: 60rem;
+	height: auto;
+}
+
+.services__cards {
+	margin-top: 5rem;
+	width: 70vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.services__card {
+	background-color: $color-prim-background;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px $color-shadow;
+	margin: 10px;
+	width: 40rem;
+	min-height: fit-content;
+	transition: transform 0.2s ease-in-out;
+	padding: 2rem;
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+
+.services__card__image {
+	width: 100%;
+	height: auto;
+	border-bottom: 2px solid $color-primary;
+}
+
+.services__card__title {
+	color: $color-heading;
+	font-family: "manrope", sans-serif;
+	font-size: 4rem;
+	text-align: center;
+	margin: 2rem 0;
+}
+
+.services__card__description {
+	color: $color-gray;
+	font-family: "manrope", sans-serif;
+	font-size: 2rem;
+	line-height: 1.5;
+	padding: 0 15px 15px 15px;
+	text-align: justify;
+	font-weight: 400;
+}
+
+.services__card:nth-child(odd) {
+  	background-color: $color-sec-background;
+}
+
+.services__card:nth-child(even) {
+  	background-color: $color-prim-background;
+}
+
+
+.footer__container {
+	background-color: $color-heading;
+	color: $color-white;
+	display: flex;
+	justify-content: space-around;
+	padding: 7rem;
+}
+
+
+.footer__logo {
+  	text-align: center;
+}
+
+.footer__logo__image {
+	width: 10rem; 
+	height: auto;
+}
+
+.footer__logo__text {
+	margin-top: 1rem;
+	font-family: "Manrope", sans-serif;
+	font-size: 5rem;
+	font-weight: bold;
+	color: $color-white;
+}
+
+
+.footer__terms,
+.footer__contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 300px; 
+	font-family: "Manrope", sans-serif;
+	font-size: 2rem;
+}
+
+.footer__contact {
+  	text-align: right;
+}
+
+
+.footer__terms h4,
+.footer__contact h4 {
+	margin-bottom: 10px;
+	color: $color-white;
+}
+
+.footer__terms p,
+.footer__contact p {
+  	color: $color-white;
 }
