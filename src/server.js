@@ -4,7 +4,7 @@ const dotenv = require("dotenv").config();
 const { upload } = require("./middleware/resUpload");
 const port = process.env.PORT || 6969;
 
-<<<<<<< HEAD
+
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -69,10 +69,7 @@ app.listen(port, () => {
   console.log(
     chalk.greenBright(`🚀 Server is running on http://localhost:${port} 🚀`)
   );
-=======
+  });
 app.use(cookieParser());
 
-app.listen(port, () => {
-	console.log(chalk.greenBright(`🚀 Server is running on port ${port} 🚀`));
->>>>>>> cf063364c88c2c21dfd3732b386a3f433417c25b
-});
+  
