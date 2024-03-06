@@ -70,6 +70,6 @@ app.listen(port, () => {
     chalk.greenBright(`🚀 Server is running on http://localhost:${port} 🚀`)
   );
   });
-app.use(cookieParser());
+
 
   
