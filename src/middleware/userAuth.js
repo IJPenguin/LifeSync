@@ -11,9 +11,9 @@ const user_collection = database.collection("users");
 router.get("/login/:username-:password",async (res, req) => {
 	const username = req.params.username;
 	const password = req.params.password;
-
+	
     await client.connect();
-
+	
     
 });
 
