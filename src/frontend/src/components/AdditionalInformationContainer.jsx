@@ -20,7 +20,8 @@ const AdditionalInformationContainer = () => {
   };
 
   return (
-    <div>
+
+<div className="container">
       <h2>Advanced Directives</h2>
       <label>
         Living Will or Healthcare Proxy (if applicable):

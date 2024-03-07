@@ -11,7 +11,7 @@ const AdditionalInformationContainer2 = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Preferred Hospital or Medical Facility (if any)</h2>
       <input
         type="text"

@@ -14,7 +14,7 @@ const VitalHealthInfoContainer = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Vital Health Information</h2>
       <label>
         Blood Type:

@@ -6,6 +6,7 @@ import AdditionalInformationContainer from "./AdditionalInformationContainer";
 import AdditionalInformationContainer2 from "./AdditionalInformationContainer2";
 import InsuranceInformationContainer from "./InsuranceInfoContainer";
 import PrimaryCarePhysicianContainer from "./PrimaryCarePhysicianContainer";
+import Navbar from "./Navbar"; // Import the Navbar component
 
 function Form() {
   const [formData, setFormData] = useState({});
@@ -35,20 +36,24 @@ function Form() {
   };
 
   return (
-    <div className="App">
-      <form onSubmit={onSubmitHandler}>
-        <ContactInfoContainer />
-        <MedicalHistoryContainer />
-        <AdditionalInformationContainer />
-        <AdditionalInformationContainer2 />
-        <InsuranceInformationContainer />
-        <PrimaryCarePhysicianContainer />
-        <div className="form-group">
-          <button className="btn" type="submit">
-            Submit
-          </button>
-        </div>
-      </form>
+    <div className="global">
+      <Navbar />
+
+      <div className="App">
+        <form onSubmit={onSubmitHandler}>
+          <ContactInfoContainer />
+          <MedicalHistoryContainer />
+          <AdditionalInformationContainer />
+          <AdditionalInformationContainer2 />
+          <InsuranceInformationContainer />
+          <PrimaryCarePhysicianContainer />
+          <div className="form-group">
+            <button className="btn" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

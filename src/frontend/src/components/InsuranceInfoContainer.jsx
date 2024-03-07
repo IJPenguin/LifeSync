@@ -13,7 +13,7 @@ const InsuranceInformationContainer = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Insurance Information</h2>
       <label>
         Insurance Provider:

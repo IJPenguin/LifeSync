@@ -24,7 +24,7 @@ const PrimaryCarePhysicianContainer = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Primary Care Physician</h2>
       <label>
         <input

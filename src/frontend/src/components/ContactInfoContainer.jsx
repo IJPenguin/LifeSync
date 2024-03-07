@@ -16,7 +16,7 @@ const ContactInfoContainer = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h2>Contact Information</h2>
       <label>
         Address:
