@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
 	return (
 		<div className="hero__container">
@@ -8,7 +10,9 @@ export default function Hero() {
 				<h1 className="hero__text__title">
 					Smart Ambulance & Healthcare Service Provider
 				</h1>
-				<button className="hero__text__button">Get Started</button>
+				<Link to="/form">
+					<button className="hero__text__button">Get Started</button>
+				</Link>
 			</div>
 			<div className="hero__images">
 				<img

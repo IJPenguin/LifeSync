@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Signup() {
 	const [email, setEmail] = useState("");
@@ -38,17 +39,19 @@ export default function Signup() {
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
 						/>
-						<button type="submit" className="signup__button">
-							Sign Up
-						</button>
+						<Link to="/home">
+							<button type="submit" className="signup__button">
+								Sign Up
+							</button>
+						</Link>
 					</form>
 
-					{/* <p className="signup__text">
-                        Already have an account?{" "}
-                        <Link to="/login" className="signup__login__link">
-                            Login
-                        </Link>
-                    </p> */}
+					<p className="signup__text">
+						Already have an account?{" "}
+						<Link to="/login" className="signup__login__link">
+							Login
+						</Link>
+					</p>
 				</div>
 				<img
 					src="/assets/images/signup_img.png"
