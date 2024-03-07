@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
 	const [email, setEmail] = useState("");
@@ -34,16 +35,18 @@ export default function Login() {
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
 						/>
-						<button type="submit" className="login__button">
-							Login
-						</button>
+						<Link to="/home">
+							<button type="submit" className="login__button">
+								Login
+							</button>
+						</Link>
 					</form>
-					{/* <p className="login__text">
-                        Need to Signup?{" "}
-                        <Link to="/signup" className="login__signup__link">
-                            Create Account
-                        </Link>
-                    </p> */}
+					<p className="login__text">
+						Need to Signup?{" "}
+						<Link to="/signup" className="login__signup__link">
+							Create Account
+						</Link>
+					</p>
 				</div>
 			</div>
 		</div>

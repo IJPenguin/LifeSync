@@ -13,7 +13,7 @@ $color-primary: #007b34;
 $color-prim-background: #fffce5;
 $color-sec-background: #bde9c9;
 $color-secondary: #2ea542;
-$color-heading: #00471F;
+$color-heading: #00471f;
 $color-white: #fff;
 $color-shadow: rgba(100, 100, 111, 0.2);
 $color-gray: #343434;
@@ -118,18 +118,20 @@ html {
 	padding: 0.5rem 2rem;
 	cursor: pointer;
 	transition: all 0.2s;
+	margin-bottom: 2rem;
 }
 
 .login__button:hover {
 	background-color: $color-heading;
 }
 
-// .login__signup__link,
-// .login__signup__link:visited,
-// .login__signup__link:active {
-// 	/* text-decoration: none; */
-// 	color: #000;
-// }
+.login__signup__link,
+.login__signup__link:visited,
+.login__signup__link:active {
+	
+	text-decoration: none;
+	color: $color-primary;
+}
 
 .signup__main__container {
 	height: 100vh;
@@ -224,12 +226,12 @@ html {
 	background-color: $color-heading;
 }
 
-// .signup__login__link,
-// .signup__login__link:visited,
-// .signup__login__link:active {
-// 	/* text-decoration: none; */
-// 	color: #000;
-// }
+.signup__login__link,
+.signup__login__link:visited,
+.signup__login__link:active {
+	text-decoration: none;
+	color: $color-primary;
+}
 
 .nav__container {
 	background-color: $color-white;
@@ -396,13 +398,13 @@ nav {
 	width: 100vw;
 	display: flex;
 	justify-content: space-around;
-	align-items: center; 
+	align-items: center;
 	margin-top: 20rem;
 	border: 3px solid $color-shadow;
 	background-color: $color-prim-background;
 }
 
-.aboutus__box{
+.aboutus__box {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -432,11 +434,11 @@ nav {
 }
 
 .services__container {
-	width: 100vw;	
+	width: 100vw;
 	margin-bottom: 10rem;
 }
 
-.services__box{
+.services__box {
 	margin-top: 20rem;
 	display: flex;
 	flex-direction: column;
@@ -505,13 +507,12 @@ nav {
 }
 
 .services__card:nth-child(odd) {
-  	background-color: $color-sec-background;
+	background-color: $color-sec-background;
 }
 
 .services__card:nth-child(even) {
-  	background-color: $color-prim-background;
+	background-color: $color-prim-background;
 }
-
 
 .footer__container {
 	background-color: $color-heading;
@@ -521,13 +522,12 @@ nav {
 	padding: 7rem;
 }
 
-
 .footer__logo {
-  	text-align: center;
+	text-align: center;
 }
 
 .footer__logo__image {
-	width: 10rem; 
+	width: 10rem;
 	height: auto;
 }
 
@@ -539,22 +539,20 @@ nav {
 	color: $color-white;
 }
 
-
 .footer__terms,
 .footer__contact {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	max-width: 300px; 
+	max-width: 300px;
 	font-family: "Manrope", sans-serif;
 	font-size: 2rem;
 }
 
 .footer__contact {
-  	text-align: right;
+	text-align: right;
 }
-
 
 .footer__terms h4,
 .footer__contact h4 {
@@ -564,5 +562,5 @@ nav {
 
 .footer__terms p,
 .footer__contact p {
-  	color: $color-white;
+	color: $color-white;
 }
