@@ -4,7 +4,7 @@
   "description": "A smart ambulance system to prevent delays in healthcare delivery",
   "main": "src/server.js",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/backend/server.js"
   },
   "author": "Ishan",
   "license": "ISC",
