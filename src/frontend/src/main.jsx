@@ -7,6 +7,8 @@ import Login from "./components/Login.jsx";
 import Form from "./components/Form.jsx";
 import Signup from "./components/Signup.jsx";
 import AiCheck from "./components/AICheck.jsx";
+import User from "./components/User.jsx";
+import Doctor from "./components/Doctor.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
 	{
 		path: "/check",
 		element: <AiCheck />,
+	},
+	{
+		path: "/user",
+		element: <User />,
+	},
+	{
+		path: "/doctor",
+		element: <Doctor />,
 	},
 ]);
 

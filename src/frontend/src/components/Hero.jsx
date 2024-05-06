@@ -10,8 +10,11 @@ export default function Hero() {
 				<h1 className="hero__text__title">
 					Smart Ambulance & Healthcare Service Provider
 				</h1>
-				<Link to="/form">
-					<button className="hero__text__button">Get Started</button>
+				<Link to="/user">
+					<button className="hero__text__button">User Services</button>
+				</Link>
+				<Link to="/doctor">
+					<button className="hero__text__button">Doctor Services</button>
 				</Link>
 			</div>
 			<div className="hero__images">
