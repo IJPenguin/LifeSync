@@ -102,7 +102,7 @@ export default function Navbar() {
 						</a>
 					</li>
 					<li className="home__nav__list__item home__nav__list__user">
-						<a href="/login" className="home__nav__list__link">
+						<a href="/check" className="home__nav__list__link">
 							Assess Yourself
 						</a>
 					</li>

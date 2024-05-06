@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./components/Login.jsx";
 import Form from "./components/Form.jsx";
 import Signup from "./components/Signup.jsx";
+import AiCheck from "./components/AICheck.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
 	{
 		path: "/signup",
 		element: <Signup />,
+	},
+	{
+		path: "/check",
+		element: <AiCheck />,
 	},
 ]);
 
