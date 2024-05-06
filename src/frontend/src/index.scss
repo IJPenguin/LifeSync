@@ -128,7 +128,6 @@ html {
 .login__signup__link,
 .login__signup__link:visited,
 .login__signup__link:active {
-	
 	text-decoration: none;
 	color: $color-primary;
 }
@@ -461,7 +460,7 @@ nav {
 
 .services__cards {
 	margin-top: 5rem;
-	width: 70vw;
+	width: 80%;
 	display: flex;
 	justify-content: space-around;
 	align-items: stretch;

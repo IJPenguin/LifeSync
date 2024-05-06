@@ -101,11 +101,11 @@ export default function Navbar() {
 							Reviews
 						</a>
 					</li>
-					{/* <li className="home__nav__list__item home__nav__list__user">
+					<li className="home__nav__list__item home__nav__list__user">
 						<a href="/login" className="home__nav__list__link">
-							Login
+							Assess Yourself
 						</a>
-					</li> */}
+					</li>
 				</ul>
 			</nav>
 		</div>
