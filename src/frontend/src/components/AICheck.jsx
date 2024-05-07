@@ -1,1 +1,3 @@
-export default function AiCheck() {}
+export default function AiCheck() {
+	return <>AI - CHECKING</>;
+}

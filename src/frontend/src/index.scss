@@ -563,3 +563,23 @@ nav {
 .footer__contact p {
 	color: $color-white;
 }
+
+.user__heading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 10rem;
+	font-family: "Manrope", sans-serif;
+	font-size: 8rem;
+	color: $color-heading;
+	text-align: center;
+}
+
+.user__button__container {
+	margin-top: 4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}

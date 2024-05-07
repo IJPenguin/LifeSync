@@ -13,7 +13,6 @@ app.use(cookieParser());
 
 app.post(
 	"/submit",
-	jwtVerify,
 	(req, res, next) => {
 		const testType = req.query.testType;
 		if (!testType) {
@@ -52,4 +51,4 @@ app.listen(port, () => {
 		chalk.greenBright(`🚀 Server is running on http://localhost:${port} 🚀`)
 	);
 });
-``
+``;
