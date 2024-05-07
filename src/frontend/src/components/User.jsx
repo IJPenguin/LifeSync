@@ -18,7 +18,7 @@ export default function User() {
 							Call an Ambulance
 						</button>
 					</Link>
-					<Link to="/selfAssessment">
+					<Link to="/check">
 						<button className="hero__text__button">
 							Self AI Assessment
 						</button>

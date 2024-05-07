@@ -17,7 +17,7 @@ const ContactInfoContainer = () => {
 
 	return (
 		<div className="container">
-			<h2>Contact Information</h2>
+			<h2 className="form__heading">Contact Information</h2>
 			<div className="form__contact">
 				<label className="form__input__text">
 					Address:
@@ -51,7 +51,7 @@ const ContactInfoContainer = () => {
 				</label>
 			</div>
 
-			<h2>Emergency Contact</h2>
+			<h2 className="form__heading">Emergency Contact</h2>
 			<div className="form__contact">
 				<label>
 					Name:

@@ -1,3 +1,4 @@
 export default function AiCheck() {
-	return <>AI - CHECKING</>;
+	window.location.href = "https://lifesync.streamlit.app/";
+	return null;
 }

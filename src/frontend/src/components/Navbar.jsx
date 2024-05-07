@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState} from "react";
 
 function Dropdown() {
+
 	const handleLogout = () => {
 		localStorage.removeItem("name");
 		localStorage.removeItem("token");
@@ -39,7 +40,9 @@ export default function Navbar() {
 				</div>
 				<ul className="home__nav__list">
 					<li className="home__nav__list__item">
-						<a href="" className="home__nav__list__link">
+						<a
+							href=""
+							className="home__nav__list__link">
 							About Us
 						</a>
 					</li>
@@ -87,17 +90,17 @@ export default function Navbar() {
 				</div>
 				<ul className="home__nav__list">
 					<li className="home__nav__list__item">
-						<a href="" className="home__nav__list__link">
+						<a href="about" className="home__nav__list__link">
 							About Us
 						</a>
 					</li>
 					<li className="home__nav__list__item">
-						<a href="" className="home__nav__list__link">
+						<a href="services" className="home__nav__list__link">
 							Services
 						</a>
 					</li>
 					<li className="home__nav__list__item">
-						<a href="" className="home__nav__list__link">
+						<a href="reviews" className="home__nav__list__link">
 							Reviews
 						</a>
 					</li>

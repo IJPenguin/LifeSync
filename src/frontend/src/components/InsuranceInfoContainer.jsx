@@ -14,7 +14,7 @@ const InsuranceInformationContainer = () => {
 
 	return (
 		<div className="container">
-			<h2>Insurance Information</h2>
+			<h2 className="form__heading">Insurance Information</h2>
 			<div className="form__contact">
 				<label>
 					Insurance Provider:

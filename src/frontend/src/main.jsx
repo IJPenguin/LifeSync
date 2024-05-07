@@ -1,15 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.scss";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Route, RouterProvider } from "react-router-dom";
 import Login from "./components/Login.jsx";
 import Form from "./components/Form.jsx";
 import Signup from "./components/Signup.jsx";
-import AiCheck from "./components/AICheck.jsx";
 import User from "./components/User.jsx";
 import Doctor from "./components/Doctor.jsx";
 import Ambulance from "./components/Ambulance.jsx";
+import AiCheck from "./components/AICheck.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -47,10 +47,6 @@ const router = createBrowserRouter([
 	{
 		path: "/ambulance",
 		element: <Ambulance />,
-	},
-	{
-		path: "/selfAssessment",
-		element: <AiCheck />,
 	},
 ]);
 

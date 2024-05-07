@@ -26,7 +26,7 @@ const PrimaryCarePhysicianContainer = () => {
 
 	return (
 		<div className="container">
-			<h2>Primary Care Physician</h2>
+			<h2 className="form__heading">Primary Care Physician</h2>
 			<label>
 				<input
 					className="user__form__input checkbox"

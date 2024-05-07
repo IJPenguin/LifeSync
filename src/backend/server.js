@@ -7,13 +7,14 @@ const cookieParser = require("cookie-parser");
 const { jwtVerify } = require("./middleware/jwtVerify");
 const userRouter = require("./middleware/userAuth");
 const staffRouter = require("./middleware/staffAuth");
+const cors = require("cors");
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
 app.post(
 	"/submit",
-	jwtVerify,
 	(req, res, next) => {
 		const testType = req.query.testType;
 		if (!testType) {
@@ -27,30 +28,33 @@ app.post(
 		const formData = req.body;
 		const files = req.files;
 
-    const fileNamePrefix = `${req.userId}_${req.testType}_`;
-    files.forEach((file) => {
-      file.filename = fileNamePrefix + Date.now() + "-" + file.originalname;
-    });
+		const fileNamePrefix = `${req.userId}_${req.testType}_`;
+		files.forEach((file) => {
+			file.filename =
+				fileNamePrefix + Date.now() + "-" + file.originalname;
+		});
 
-    console.log("Form Data:", formData);
-    console.log("Uploaded Files:", files);
+		console.log("Form Data:", formData);
+		console.log("Uploaded Files:", files);
 
-    res.status(200).json({
-      message: "Form submitted successfully",
-      formData,
-      files,
-    });
-  }
+		res.status(200).json({
+			message: "Form submitted successfully",
+			formData,
+			files,
+		});
+	}
 );
 
-app.get("/")
+app.use(express.json()); // for parsing application/json
+
+app.post("/location", (req, res) => {
+	console.log(req.body);
+	res.send("Location received!");
+});
 
 app.use("/user", userRouter);
 app.use("/staff", staffRouter);
 
-app.listen(port, () => {
-  console.log(
-    chalk.greenBright(`🚀 Server is running on http://localhost:${port} 🚀`)
-  );
+app.listen(port, "0.0.0.0", () => {
+	console.log(`Server listening at http://0.0.0.0:${port}`);
 });
-``;
