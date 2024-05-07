@@ -38,7 +38,7 @@ class _FallDetectionAppState extends State<FallDetectionApp> {
   void _sendLocationToServer() async {
     try {
       Position position = await Geolocator.getCurrentPosition();
-      Uri url = Uri.parse('http://192.168.1.2:3000/location');
+      Uri url = Uri.parse('http://192.168.1.2:6969/location');
 
       var body = {
         'latitude': position.latitude.toString(),

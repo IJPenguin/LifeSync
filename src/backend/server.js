@@ -45,11 +45,16 @@ app.post(
 	}
 );
 
+app.use(express.json()); // for parsing application/json
+
+app.post("/location", (req, res) => {
+	console.log(req.body);
+	res.send("Location received!");
+});
+
 app.use("/user", userRouter);
 app.use("/staff", staffRouter);
 
-app.listen(port, () => {
-	console.log(
-		chalk.greenBright(`🚀 Server is running on http://localhost:${port} 🚀`)
-	);
+app.listen(port, "0.0.0.0", () => {
+	console.log(`Server listening at http://0.0.0.0:${port}`);
 });
