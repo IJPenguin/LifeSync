@@ -7,7 +7,7 @@ import AdditionalInformationContainer2 from "./AdditionalInformationContainer2";
 import InsuranceInformationContainer from "./InsuranceInfoContainer";
 import PrimaryCarePhysicianContainer from "./PrimaryCarePhysicianContainer";
 import Navbar from "./Navbar"; // Import the Navbar component
-import axios from "axios";
+import axios from "axios"; 
 
 function Form() {
 	const [formData, setFormData] = useState({});
