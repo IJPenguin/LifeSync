@@ -8,10 +8,17 @@ const { jwtVerify } = require("./middleware/jwtVerify");
 const userRouter = require("./middleware/userAuth");
 const staffRouter = require("./middleware/staffAuth");
 const cors = require("cors");
+const path = require("path");
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/vid", (req, res) => {
+	res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 
 app.post(
 	"/submit",
@@ -55,6 +62,6 @@ app.post("/location", (req, res) => {
 app.use("/user", userRouter);
 app.use("/staff", staffRouter);
 
-app.listen(port, "0.0.0.0", () => {
-	console.log(`Server listening at http://0.0.0.0:${port}`);
+app.listen(port, () => {
+	console.log(`Server listening at http://localhost:${port}`);
 });
