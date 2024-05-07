@@ -40,6 +40,7 @@ const MedicalHistoryContainer = () => {
 						<option value="">Select Test Type</option>
 						<option value="bloodTest">Blood Test</option>
 						<option value="urineTest">Urine Test</option>
+						<option value="other">Other Test</option>
 						{/* Add more test types as needed */}
 					</select>
 				</label>
@@ -47,7 +48,7 @@ const MedicalHistoryContainer = () => {
 				<label className="form__input__text">
 					Upload Test Reports:
 					<input
-						className="user__form__input"
+						className="user__form__input file__button"
 						type="file"
 						name="testReportFiles"
 						multiple

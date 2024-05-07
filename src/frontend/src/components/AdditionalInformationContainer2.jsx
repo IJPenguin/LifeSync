@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
 const AdditionalInformationContainer2 = () => {
-  const [preferredHospital, setPreferredHospital] = useState("");
-  const [languagePreference, setLanguagePreference] = useState("");
-  const [specialInstructions, setSpecialInstructions] = useState("");
-  const [consentForDataSharing, setConsentForDataSharing] = useState(false);
+	const [preferredHospital, setPreferredHospital] = useState("");
+	const [languagePreference, setLanguagePreference] = useState("");
+	const [specialInstructions, setSpecialInstructions] = useState("");
+	const [consentForDataSharing, setConsentForDataSharing] = useState(false);
 
-  const handleCheckboxChange = () => {
-    setConsentForDataSharing(!consentForDataSharing);
-  };
+	const handleCheckboxChange = () => {
+		setConsentForDataSharing(!consentForDataSharing);
+	};
 
-  return (
+	return (
 		<div className="container">
 			<h2>Preferred Hospital or Medical Facility (if any)</h2>
 			<input
@@ -39,7 +39,7 @@ const AdditionalInformationContainer2 = () => {
 			<h2>Consent for Data Sharing</h2>
 			<label>
 				<input
-					className="user__form__input"
+					className="user__form__input checkbox"
 					type="checkbox"
 					checked={consentForDataSharing}
 					onChange={handleCheckboxChange}
@@ -47,7 +47,7 @@ const AdditionalInformationContainer2 = () => {
 				I consent for my data to be shared.
 			</label>
 		</div>
-  );
+	);
 };
 
 export default AdditionalInformationContainer2;
