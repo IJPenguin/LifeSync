@@ -31,11 +31,19 @@ function Form() {
 		}
 	};
 
-	const onSubmitHandler = (event) => {
+	const onSubmitHandler = async(event) => {
 		event.preventDefault();
 
 		try {
             const response = await axios.post('http://localhost:6969');
+            setFormData({ ...formData, [e.target.name]: e.target.value});
+            setFormData({
+                name: '',
+                email: '',
+                message: ''
+      });
+        }catch(err){
+            console.log(err);
         }
 	};
 
