@@ -45,10 +45,6 @@ app.post(
 	}
 );
 
-app.get("/ai-check", (req, res) => {
-    
-});
-
 app.use("/user", userRouter);
 app.use("/staff", staffRouter);
 
