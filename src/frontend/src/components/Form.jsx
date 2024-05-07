@@ -34,17 +34,9 @@ function Form() {
 	const onSubmitHandler = (event) => {
 		event.preventDefault();
 
-		useEffect(() => {
-			fetchData();
-		}, []);
-	};
-
-	const fetchData = async () => {
 		try {
-			const response = await axios.post("http://localhost:6969");
-		} catch (err) {
-			console.log(err);
-		}
+            const response = await axios.post('http://localhost:6969');
+        }
 	};
 
 	return (
