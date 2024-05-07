@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 
 const AdditionalInformationContainer = () => {
-  const [advancedDirectives, setAdvancedDirectives] = useState({
-    livingWillOrHealthcareProxy: "",
-    endOfLifePreferences: "",
-  });
-  const [additionalInfo, setAdditionalInfo] = useState("");
+	const [advancedDirectives, setAdvancedDirectives] = useState({
+		livingWillOrHealthcareProxy: "",
+		endOfLifePreferences: "",
+	});
+	const [additionalInfo, setAdditionalInfo] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    if (
-      name === "livingWillOrHealthcareProxy" ||
-      name === "endOfLifePreferences"
-    ) {
-      setAdvancedDirectives({ ...advancedDirectives, [name]: value });
-    } else {
-      setAdditionalInfo(value);
-    }
-  };
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		if (
+			name === "livingWillOrHealthcareProxy" ||
+			name === "endOfLifePreferences"
+		) {
+			setAdvancedDirectives({ ...advancedDirectives, [name]: value });
+		} else {
+			setAdditionalInfo(value);
+		}
+	};
 
-  return (
+	return (
 		<div className="container">
-			<h2>Advanced Directives</h2>
+			<h2 className="form__heading">Advanced Directives</h2>
 			<label>
 				Living Will or Healthcare Proxy (if applicable):
 				<input
@@ -52,7 +52,7 @@ const AdditionalInformationContainer = () => {
 				onChange={(e) => setAdditionalInfo(e.target.value)}
 			/>
 		</div>
-  );
+	);
 };
 
 export default AdditionalInformationContainer;

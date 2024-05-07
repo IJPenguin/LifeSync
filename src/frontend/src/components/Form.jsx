@@ -35,7 +35,7 @@ function Form() {
 		event.preventDefault();
 
 		try {
-			const response = await axios.post("http://localhost:6969");
+			const response = await axios.post("http://localhost:6969/submit");
 			setFormData({ ...formData, [e.target.name]: e.target.value });
 			setFormData({
 				name: "",

@@ -29,7 +29,7 @@ const MedicalHistoryContainer = () => {
 
 	return (
 		<div className="container">
-			<h2>Medical History</h2>
+			<h2 className="form__heading">Medical History</h2>
 			<div className="form__contact">
 				<label className="form__input__text">
 					Test Type:

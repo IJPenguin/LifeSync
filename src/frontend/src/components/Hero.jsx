@@ -11,10 +11,14 @@ export default function Hero() {
 					Smart Ambulance & Healthcare Service Provider
 				</h1>
 				<Link to="/user">
-					<button className="hero__text__button">User Services</button>
+					<button className="hero__text__button">
+						User Services
+					</button>
 				</Link>
 				<Link to="/doctor">
-					<button className="hero__text__button">Doctor Services</button>
+					<button className="hero__text__button">
+						Doctor Services
+					</button>
 				</Link>
 			</div>
 			<div className="hero__images">

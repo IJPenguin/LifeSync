@@ -12,7 +12,9 @@ const AdditionalInformationContainer2 = () => {
 
 	return (
 		<div className="container">
-			<h2>Preferred Hospital or Medical Facility (if any)</h2>
+			<h2 className="form__heading">
+				Preferred Hospital or Medical Facility (if any)
+			</h2>
 			<input
 				className="user__form__input"
 				type="text"
@@ -20,7 +22,9 @@ const AdditionalInformationContainer2 = () => {
 				onChange={(e) => setPreferredHospital(e.target.value)}
 			/>
 
-			<h2>Language Preference for Communication</h2>
+			<h2 className="form__heading">
+				Language Preference for Communication
+			</h2>
 			<input
 				className="user__form__input"
 				type="text"
@@ -28,7 +32,9 @@ const AdditionalInformationContainer2 = () => {
 				onChange={(e) => setLanguagePreference(e.target.value)}
 			/>
 
-			<h2>Special Instructions or Preferences (if any)</h2>
+			<h2 className="form__heading">
+				Special Instructions or Preferences (if any)
+			</h2>
 			<textarea
 				rows="4"
 				cols="50"
@@ -36,7 +42,7 @@ const AdditionalInformationContainer2 = () => {
 				onChange={(e) => setSpecialInstructions(e.target.value)}
 			/>
 
-			<h2>Consent for Data Sharing</h2>
+			<h2 className="form__heading">Consent for Data Sharing</h2>
 			<label>
 				<input
 					className="user__form__input checkbox"
