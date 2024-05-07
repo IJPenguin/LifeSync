@@ -31,20 +31,20 @@ function Form() {
 		}
 	};
 
-	const onSubmitHandler = async(event) => {
+	const onSubmitHandler = async (event) => {
 		event.preventDefault();
 
 		try {
-            const response = await axios.post('http://localhost:6969');
-            setFormData({ ...formData, [e.target.name]: e.target.value});
-            setFormData({
-                name: '',
-                email: '',
-                message: ''
-      });
-        }catch(err){
-            console.log(err);
-        }
+			const response = await axios.post("http://localhost:6969");
+			setFormData({ ...formData, [e.target.name]: e.target.value });
+			setFormData({
+				name: "",
+				email: "",
+				message: "",
+			});
+		} catch (err) {
+			console.log(err);
+		}
 	};
 
 	return (
@@ -64,7 +64,7 @@ function Form() {
 					<InsuranceInformationContainer />
 					<PrimaryCarePhysicianContainer />
 					<div className="form-group">
-						<button className="btn" type="submit">
+						<button className="login__button btn" type="submit">
 							Submit
 						</button>
 					</div>

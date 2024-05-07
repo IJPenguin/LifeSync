@@ -43,6 +43,8 @@ app.post(
   }
 );
 
+app.get("/")
+
 app.use("/user", userRouter);
 app.use("/staff", staffRouter);
 

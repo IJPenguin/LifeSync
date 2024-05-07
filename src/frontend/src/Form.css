@@ -8,6 +8,7 @@
 	font-family: "Tiempos_Bold";
 	src: url("/assets/fonts/Tiempos-Font/TiemposHeadline-Medium.otf");
 }
+
 .global {
 	background-color: #bde9c9;
 }
@@ -58,6 +59,7 @@ h2 {
 
 .form__input__text {
 	font-size: 2rem;
+	margin-bottom: 2rem;
 }
 
 .h_cont {
@@ -105,8 +107,8 @@ option {
 	font-size: 1.3rem;
 }
 
-user__form__input,
-user__form__input:focus {
+.user__form__input,
+.user__form__input:focus {
 	border: none;
 	background-color: #bde9c9;
 	border-bottom: 1px solid black;
@@ -115,6 +117,17 @@ user__form__input:focus {
 	font-size: 2rem;
 	margin-bottom: 2rem;
 	margin-left: 1rem;
+}
+
+.file__button {
+	border: none;
+	background-color: #bde9c9;
+}
+
+.checkbox {
+	border: none;
+	background-color: #bde9c9;
+	margin-right: 1rem;
 }
 
 textarea {
@@ -129,8 +142,6 @@ textarea {
 
 /* Button */
 .btn {
-	color: #fff;
-	background-color: #007b34;
 	font-size: 2rem;
 	padding: 2rem 4rem;
 	border-radius: 40px;

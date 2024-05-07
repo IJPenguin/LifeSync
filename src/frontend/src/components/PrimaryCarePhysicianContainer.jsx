@@ -1,34 +1,35 @@
 import React, { useState } from "react";
 
 const PrimaryCarePhysicianContainer = () => {
-  const [hasPrimaryCarePhysician, setHasPrimaryCarePhysician] = useState(false);
-  const [physicianInfo, setPhysicianInfo] = useState({
-    name: "",
-    contact: "",
-  });
+	const [hasPrimaryCarePhysician, setHasPrimaryCarePhysician] =
+		useState(false);
+	const [physicianInfo, setPhysicianInfo] = useState({
+		name: "",
+		contact: "",
+	});
 
-  const handleCheckboxChange = (e) => {
-    setHasPrimaryCarePhysician(e.target.checked);
-    if (!e.target.checked) {
-      // Clear physician info if checkbox is unchecked
-      setPhysicianInfo({
-        name: "",
-        contact: "",
-      });
-    }
-  };
+	const handleCheckboxChange = (e) => {
+		setHasPrimaryCarePhysician(e.target.checked);
+		if (!e.target.checked) {
+			// Clear physician info if checkbox is unchecked
+			setPhysicianInfo({
+				name: "",
+				contact: "",
+			});
+		}
+	};
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setPhysicianInfo({ ...physicianInfo, [name]: value });
-  };
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setPhysicianInfo({ ...physicianInfo, [name]: value });
+	};
 
-  return (
+	return (
 		<div className="container">
 			<h2>Primary Care Physician</h2>
 			<label>
 				<input
-					className="user__form__input"
+					className="user__form__input checkbox"
 					type="checkbox"
 					checked={hasPrimaryCarePhysician}
 					onChange={handleCheckboxChange}
@@ -62,7 +63,7 @@ const PrimaryCarePhysicianContainer = () => {
 				</div>
 			)}
 		</div>
-  );
+	);
 };
 
 export default PrimaryCarePhysicianContainer;
