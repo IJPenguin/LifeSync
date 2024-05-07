@@ -20,37 +20,38 @@ const AdditionalInformationContainer = () => {
   };
 
   return (
+		<div className="container">
+			<h2>Advanced Directives</h2>
+			<label>
+				Living Will or Healthcare Proxy (if applicable):
+				<input
+					className="user__form__input"
+					type="text"
+					name="livingWillOrHealthcareProxy"
+					value={advancedDirectives.livingWillOrHealthcareProxy}
+					onChange={handleChange}
+				/>
+			</label>
+			<br />
+			<label>
+				End-of-Life Preferences (if applicable):
+				<input
+					className="user__form__input"
+					type="text"
+					name="endOfLifePreferences"
+					value={advancedDirectives.endOfLifePreferences}
+					onChange={handleChange}
+				/>
+			</label>
 
-<div className="container">
-      <h2>Advanced Directives</h2>
-      <label>
-        Living Will or Healthcare Proxy (if applicable):
-        <input
-          type="text"
-          name="livingWillOrHealthcareProxy"
-          value={advancedDirectives.livingWillOrHealthcareProxy}
-          onChange={handleChange}
-        />
-      </label>
-      <br />
-      <label>
-        End-of-Life Preferences (if applicable):
-        <input
-          type="text"
-          name="endOfLifePreferences"
-          value={advancedDirectives.endOfLifePreferences}
-          onChange={handleChange}
-        />
-      </label>
-
-      <h2>Additional Information</h2>
-      <textarea
-        rows="4"
-        cols="50"
-        value={additionalInfo}
-        onChange={(e) => setAdditionalInfo(e.target.value)}
-      />
-    </div>
+			<h2>Additional Information</h2>
+			<textarea
+				rows="4"
+				cols="50"
+				value={additionalInfo}
+				onChange={(e) => setAdditionalInfo(e.target.value)}
+			/>
+		</div>
   );
 };
 

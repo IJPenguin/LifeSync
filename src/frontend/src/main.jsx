@@ -9,6 +9,7 @@ import Signup from "./components/Signup.jsx";
 import AiCheck from "./components/AICheck.jsx";
 import User from "./components/User.jsx";
 import Doctor from "./components/Doctor.jsx";
+import Ambulance from "./components/Ambulance.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -42,6 +43,14 @@ const router = createBrowserRouter([
 	{
 		path: "/doctor",
 		element: <Doctor />,
+	},
+	{
+		path: "/ambulance",
+		element: <Ambulance />,
+	},
+	{
+		path: "/selfAssessment",
+		element: <AiCheck />,
 	},
 ]);
 

@@ -12,20 +12,20 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.post(
-  "/submit",
-  // jwtVerify,
-  (req, res, next) => {
-    const testType = req.query.testType;
-    if (!testType) {
-      return res.status(400).json({ message: "Test Type is required" });
-    }
-    req.testType = testType;
-    next();
-  },
-  upload.array("testResultFiles", 5),
-  (req, res) => {
-    const formData = req.body;
-    const files = req.files;
+	"/submit",
+	jwtVerify,
+	(req, res, next) => {
+		const testType = req.query.testType;
+		if (!testType) {
+			return res.status(400).json({ message: "Test Type is required" });
+		}
+		req.testType = testType;
+		next();
+	},
+	upload.array("testResultFiles", 5),
+	(req, res) => {
+		const formData = req.body;
+		const files = req.files;
 
     const fileNamePrefix = `${req.userId}_${req.testType}_`;
     files.forEach((file) => {

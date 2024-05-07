@@ -24,41 +24,44 @@ const PrimaryCarePhysicianContainer = () => {
   };
 
   return (
-    <div className="container">
-      <h2>Primary Care Physician</h2>
-      <label>
-        <input
-          type="checkbox"
-          checked={hasPrimaryCarePhysician}
-          onChange={handleCheckboxChange}
-        />
-        Has Primary Care Physician
-      </label>
+		<div className="container">
+			<h2>Primary Care Physician</h2>
+			<label>
+				<input
+					className="user__form__input"
+					type="checkbox"
+					checked={hasPrimaryCarePhysician}
+					onChange={handleCheckboxChange}
+				/>
+				Has Primary Care Physician
+			</label>
 
-      {hasPrimaryCarePhysician && (
-        <div>
-          <label>
-            Name of Primary Care Physician:
-            <input
-              type="text"
-              name="name"
-              value={physicianInfo.name}
-              onChange={handleChange}
-            />
-          </label>
+			{hasPrimaryCarePhysician && (
+				<div>
+					<label>
+						Name of Primary Care Physician:
+						<input
+							className="user__form__input"
+							type="text"
+							name="name"
+							value={physicianInfo.name}
+							onChange={handleChange}
+						/>
+					</label>
 
-          <label>
-            Contact Information for Primary Care Physician:
-            <input
-              type="text"
-              name="contact"
-              value={physicianInfo.contact}
-              onChange={handleChange}
-            />
-          </label>
-        </div>
-      )}
-    </div>
+					<label>
+						Contact Information for Primary Care Physician:
+						<input
+							className="user__form__input"
+							type="text"
+							name="contact"
+							value={physicianInfo.contact}
+							onChange={handleChange}
+						/>
+					</label>
+				</div>
+			)}
+		</div>
   );
 };
 
