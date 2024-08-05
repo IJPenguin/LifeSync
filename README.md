@@ -1,5 +1,4 @@
-# Project Name
-LifeSync : Smart Ambulance System
+# LifeSync : Smart Ambulance System
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
