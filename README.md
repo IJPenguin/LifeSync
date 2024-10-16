@@ -32,5 +32,5 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## Contact
 
-- [GitHub](https://github.com/your-username)
-- Email: your-email@example.com
+- [GitHub](https://github.com/ImCYMBIOT) [GitHub](https://github.com/IJPenguin)
+- Email: agniveshkumar15@gmail.com, ishanjaiswal370@gmail.com
